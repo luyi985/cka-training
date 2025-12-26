@@ -1,0 +1,105 @@
+# Conventions
+
+These conventions define the preferred style and working patterns for this project.
+They guide structure, readability, and collaboration.
+
+---
+
+## 1. General Principles
+
+- Prefer clarity over cleverness.
+- Prefer explicit code over implicit behavior.
+- Optimize for maintainability, not short-term speed.
+- Write code as if it will be maintained by someone else in 6 months.
+
+---
+
+## 2. Change Discipline
+
+- Keep changes small and focused.
+- Avoid mixing refactoring with feature changes.
+- One logical change per commit or request.
+- If a change feels large, propose a plan before implementing.
+
+---
+
+## 3. Code Structure
+
+- Separate domain logic from transport or framework code.
+- Keep business logic free of side effects when possible.
+- Avoid deeply nested conditionals; use early returns.
+- Prefer composition over inheritance.
+
+---
+
+## 4. Naming
+
+- Use descriptive, intention-revealing names.
+- Avoid abbreviations unless they are widely understood.
+- Function names should describe behavior.
+- Variable names should describe meaning, not type.
+
+---
+
+## 5. Functions & Modules
+
+- Functions should do one thing.
+- Prefer small, testable units.
+- Avoid long functions; extract helpers when logic grows.
+- Keep modules cohesive; avoid “utility dumping grounds”.
+
+---
+
+## 6. Error Handling
+
+- Handle errors explicitly.
+- Do not swallow errors silently.
+- Fail fast when assumptions are violated.
+- Errors should provide enough context to debug.
+
+---
+
+## 7. Logging
+
+- Log with intent, not noise.
+- Logs should help answer:
+  - What happened?
+  - Where?
+  - Why?
+- Avoid excessive logging in hot paths.
+
+---
+
+## 8. Testing
+
+- Test behavior, not implementation details.
+- Unit tests for core logic.
+- Integration tests for boundaries.
+- Prefer deterministic tests over timing-based tests.
+
+---
+
+## 9. Configuration & Environment
+
+- Avoid hard-coded configuration values.
+- Prefer configuration files or environment variables.
+- Defaults should be safe and explicit.
+
+---
+
+## 10. Documentation
+
+- Document non-obvious decisions.
+- Keep comments close to the code they explain.
+- Update documentation when behavior changes.
+- Use `.ai/decisions.log.md` for architectural or long-term decisions.
+
+---
+
+## 11. AI Collaboration Rules
+
+When generating or modifying code:
+- Follow existing patterns in the codebase.
+- Match the surrounding style before introducing new ones.
+- Do not reformat unrelated code.
+- If unsure, ask before acting.
